@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<!-- saved from url=(0137)file:///C:/Users/mattb/Downloads%20-%20MATTBEAR/MATTBEAR%20-%20Mother%E2%80%99s%20Day%20Slots!%20-%20Landscape%20Compact%20QoL/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>MATTBEAR - Mother’s Day Slots!</title>
+<meta name="description" content="WORD$LOTS - Mother’s Day Edition - Customized Fun for Customized Lives - Customized Fun for Customized Lives. Free-to-play entertainment game.">
+<meta name="theme-color" content="#fff1f5">
+<link rel="manifest" href="file:///C:/Users/mattb/Downloads%20-%20MATTBEAR/MATTBEAR%20-%20Mother%E2%80%99s%20Day%20Slots!%20-%20Landscape%20Compact%20QoL/manifest.webmanifest">
+<link rel="stylesheet" href="./MATTBEAR - Mother’s Day Slots!_files/style.css">
+
+<link rel="preload" as="image" href="file:///C:/Users/mattb/Downloads%20-%20MATTBEAR/MATTBEAR%20-%20Mother%E2%80%99s%20Day%20Slots!%20-%20Landscape%20Compact%20QoL/assets/17-background-red-white-cream.png">
+</head>
+<body class="">
+
+<div id="introSplash" class="intro-splash layered-splash" role="dialog" aria-modal="true" aria-label="WORD$LOTS Mother’s Day Edition - Customized Fun for Customized Lives start screen" aria-hidden="true" style="--mx: 50%; --my: 25%;">
+  <div class="splash-bg-layer"></div>
+  <div class="splash-vignette"></div>
+  <div class="splash-particles" aria-hidden="true"></div>
+  <img class="intro-splash-img" src="./MATTBEAR - Mother’s Day Slots!_files/intro-splash.png" alt="WORD$LOTS Mother’s Day Edition - Customized Fun for Customized Lives splash screen">
+  <div class="splash-copy" aria-hidden="true">
+    <div class="splash-kicker">🌹 Free Play • No Real Money • Mother’s Day Edition 🌹</div>
+    <div class="splash-title">WORD$LOTS</div>
+    <div class="splash-subtitle">Custom Fun for Custom Lives</div>
+    <div class="splash-start-pill">CLICK ANYWHERE</div>
+    <div class="splash-hints">Mouse • Touch • Spacebar • Enter</div>
+    <div class="splash-load"><span id="splashLoadBar" style="width: 100%;"></span></div>
+  </div>
+  <button id="introStartBtn" class="intro-click-area" type="button" aria-label="Click anywhere to start"></button>
+</div>
+
+<div class="bg-grid"></div>
+<i class="orb one"></i><i class="orb two"></i><i class="orb three"></i>
+<header class="wrap">
+  <section class="top-card hero-skin">
+    <img class="hero-banner" src="./MATTBEAR - Mother’s Day Slots!_files/hero-banner.png" alt="WORD$LOTS - Mother’s Day Edition - Customized Fun for Customized Lives - Customized Fun for Customized Lives">
+    <div class="badge-stack" aria-label="Game badges">
+      <span class="badge">🌸 Mother’s Day Tiles</span>
+      <span class="badge">💗 Click Anywhere</span>
+      <span class="badge">🎁 Mother's Day Card Bonus</span>
+    </div>
+  </section>
+</header>
+
+<section class="readme-card instructions-card wrap" aria-labelledby="instructionsTitle">
+  <h2 id="instructionsTitle">Instructions</h2>
+  <div class="instruction-grid">
+    <article><h3>1. Pick a bet</h3><p>Bet − and Bet + move in dollar steps set by the hidden admin panel. Max Bet jumps to the current max.</p></article>
+    <article><h3>2. Spin</h3><p>Click Spin, tap the machine, or press Space / Enter. Press Space again during motion to fast-stop without changing the result.</p></article>
+    <article><h3>3. Read wins</h3><p>Winning paylines glow. The jackpot/status bar lists the strongest results from the spin.</p></article>
+    <article><h3>4. Features</h3><p>Card scatters open the Mother's Day bonus. Crowns add free spins. Call Mom adds reverse spins. Queen acts as the wild tile.</p></article>
+  </div>
+  <p class="mini">Keyboard: Space/Enter spin or fast-stop • A auto • S stop • + / − bet • F free spin • M max bet • R refill • B bonus preview • P sparkle • O admin.</p>
+</section>
+
+<section class="admin-card wrap" aria-labelledby="adminTitle">
+  <button class="admin-toggle" id="adminToggle" type="button" aria-expanded="false">Admin Settings</button>
+  <div class="admin-panel" id="adminPanel" hidden="">
+    <h2 id="adminTitle">Admin Settings</h2>
+    <p class="admin-note">Local browser settings. Saves to localStorage.</p>
+    <div class="admin-grid">
+      <label>Starting Coins <input id="adminStartingCoins" type="number" min="100" max="1000000" step="100"></label>
+      <label>Minimum Bet <input id="adminMinBet" type="number" min="1" max="1000" step="1"></label>
+      <label>Maximum Bet <input id="adminMaxBet" type="number" min="1" max="10000" step="1"></label>
+      <label>Current Bet <input id="adminCurrentBet" type="number" min="1" max="10000" step="1"></label>
+      <label>Wild Weight <input id="adminWildWeight" type="number" min="1" max="100" step="1"></label>
+      <label>Bonus Weight <input id="adminBonusWeight" type="number" min="1" max="100" step="1"></label>
+      <label>Free Spin Weight <input id="adminFreeWeight" type="number" min="1" max="100" step="1"></label>
+      <label>Letter Weight <input id="adminLetterWeight" type="number" min="1" max="100" step="1"></label>
+      <label>Spin Speed <select id="adminSpinSpeed"><option value="slow">Slow</option><option value="normal">Normal</option><option value="fast">Fast</option></select></label>
+      <label>Auto Delay <input id="adminAutoDelay" type="number" min="150" max="3000" step="50"></label>
+      <label>Spark Count <input id="adminSparkCount" type="number" min="0" max="120" step="1"></label>
+      <label>Bonus Picks <input id="adminBonusPicks" type="number" min="1" max="9" step="1"></label>
+    </div>
+    <div class="admin-actions">
+      <button class="btn pink" id="adminSaveBtn" type="button">Save</button>
+      <button class="btn dark" id="adminApplyBtn" type="button">Apply</button>
+      <button class="btn dark" id="adminResetBtn" type="button">Reset</button>
+      <button class="btn dark" id="adminExportBtn" type="button">Export JSON</button>
+    </div>
+    <textarea id="adminJson" class="admin-json" spellcheck="false" aria-label="Admin settings JSON"></textarea>
+    <p id="adminStatus" class="admin-status">Settings Ready.</p>
+  </div>
+</section>
+<main class="wrap grid">
+  <section class="machine" aria-label="Slot machine">
+    <div class="hud">
+      <div class="stat"><small>Coins</small><strong id="coins">59305</strong></div>
+      <div class="stat"><small>Bet</small><strong id="bet">150</strong></div>
+      <div class="stat"><small>Free Spins</small><strong id="freeSpins">2</strong></div>
+      <div class="stat"><small>Last Win</small><strong id="lastWin">3000</strong></div>
+      <div class="stat"><small>Total Win</small><strong id="totalWin">12995</strong></div>
+    </div>
+    <div class="jackpot" id="jackpotText">Line 4: DIAMOND x3 = 4x • Line 5: MOTHER'S DAY CARD x3 = 6x • 3 Card scatters = 10x + bonus</div>
+    <div class="reels slot-grid" id="reels" aria-live="polite">
+      <div class="slot-cell win" id="cell0" style=""><div class="symbol"><img src="./MATTBEAR - Mother’s Day Slots!_files/16-mothers-day-card-tile.png" alt="MOTHER&#39;S DAY CARD" loading="eager" decoding="async"></div></div><div class="slot-cell" id="cell1" style=""><div class="symbol"><img src="./MATTBEAR - Mother’s Day Slots!_files/01-mom-tile.png" alt="MOM" loading="eager" decoding="async"></div></div><div class="slot-cell" id="cell2" style=""><div class="symbol"><img src="./MATTBEAR - Mother’s Day Slots!_files/01-mom-tile.png" alt="MOM" loading="eager" decoding="async"></div></div><div class="slot-cell" id="cell3" style=""><div class="symbol"><img src="./MATTBEAR - Mother’s Day Slots!_files/12-kiss-tile.png" alt="KISS" loading="eager" decoding="async"></div></div>
+      <div class="slot-cell win" id="cell4" style=""><div class="symbol"><img src="./MATTBEAR - Mother’s Day Slots!_files/16-mothers-day-card-tile.png" alt="MOTHER&#39;S DAY CARD" loading="eager" decoding="async"></div></div><div class="slot-cell" id="cell5" style=""><div class="symbol"><img src="./MATTBEAR - Mother’s Day Slots!_files/14-pearl-necklace-tile.png" alt="PEARL NECKLACE" loading="eager" decoding="async"></div></div><div class="slot-cell" id="cell6" style=""><div class="symbol"><img src="./MATTBEAR - Mother’s Day Slots!_files/01-mom-tile.png" alt="MOM" loading="eager" decoding="async"></div></div><div class="slot-cell" id="cell7" style=""><div class="symbol"><img src="./MATTBEAR - Mother’s Day Slots!_files/14-pearl-necklace-tile.png" alt="PEARL NECKLACE" loading="eager" decoding="async"></div></div>
+      <div class="slot-cell win" id="cell8" style=""><div class="symbol"><img src="./MATTBEAR - Mother’s Day Slots!_files/07-rose-tile.png" alt="ROSE" loading="eager" decoding="async"></div></div><div class="slot-cell" id="cell9" style=""><div class="symbol"><img src="./MATTBEAR - Mother’s Day Slots!_files/16-mothers-day-card-tile.png" alt="MOTHER&#39;S DAY CARD" loading="eager" decoding="async"></div></div><div class="slot-cell" id="cell10" style=""><div class="symbol"><img src="./MATTBEAR - Mother’s Day Slots!_files/11-chocolate-box-tile.png" alt="CHOCOLATE BOX" loading="eager" decoding="async"></div></div><div class="slot-cell" id="cell11" style=""><div class="symbol"><img src="./MATTBEAR - Mother’s Day Slots!_files/01-mom-tile.png" alt="MOM" loading="eager" decoding="async"></div></div>
+      <div class="slot-cell win" id="cell12" style=""><div class="symbol"><img src="./MATTBEAR - Mother’s Day Slots!_files/02-queen-tile.png" alt="QUEEN" loading="eager" decoding="async"></div></div><div class="slot-cell win" id="cell13" style=""><div class="symbol"><img src="./MATTBEAR - Mother’s Day Slots!_files/09-diamond-tile.png" alt="DIAMOND" loading="eager" decoding="async"></div></div><div class="slot-cell win" id="cell14" style=""><div class="symbol"><img src="./MATTBEAR - Mother’s Day Slots!_files/13-perfume-tile.png" alt="PERFUME" loading="eager" decoding="async"></div></div><div class="slot-cell win" id="cell15" style=""><div class="symbol"><img src="./MATTBEAR - Mother’s Day Slots!_files/09-diamond-tile.png" alt="DIAMOND" loading="eager" decoding="async"></div></div>
+    </div>
+    <div class="controls">
+      <button class="btn pink" id="spinBtn">Spin</button><button class="btn yellow" id="freeBtn">FREE Spin</button><button class="btn dark" id="autoBtn">Auto</button><button class="btn dark" id="stopBtn" disabled="">Stop</button>
+    </div>
+    <div class="secondary-controls">
+      <button class="btn dark" id="betDownBtn">Bet −</button><button class="btn dark" id="betUpBtn">Bet +</button><button class="btn pink" id="maxBtn">Max Bet</button><button class="btn dark" id="refillBtn">Refill</button>
+    </div>
+    <div class="secondary-controls tertiary">
+      <button class="btn purple" id="openBonusBtn">Bonus Splash</button><button class="btn dark" id="resetBonusBtn">Reset Bonus</button><button class="btn dark" id="soundBtn" aria-pressed="false">🔇 Sound Off</button><button class="btn dark" id="sparkleBtn" aria-pressed="false">✨ Sparkle Mode</button>
+    </div>
+    <div class="qol-strip" aria-label="Quick controls">
+      <button class="mini-btn" id="quickRulesBtn" type="button">📜 Rules</button>
+      <button class="mini-btn" id="quickPaylinesBtn" type="button">📐 Paylines</button>
+      <button class="mini-btn" id="quickMotionBtn" type="button" aria-pressed="false">🧘 Less Flash</button>
+      <button class="mini-btn" id="quickSaveBtn" type="button">💾 Save</button>
+    </div>
+    <div class="status output-status" id="status">Auto spin stopped.</div>
+  </section>
+  <aside class="side-card rules-card">
+    <h2>Paytable</h2>
+    <p class="mini"><strong>All pays use the current spin bet.</strong> Wild Queen substitutes on paylines. Scatters pay anywhere.</p>
+    <div class="paytable dense-paytable">
+      <div class="pay-row premium"><span>QUEEN x4 line</span><strong>75x</strong></div>
+      <div class="pay-row premium"><span>MOTHER'S DAY CARD x4 line</span><strong>50x + Bonus</strong></div>
+      <div class="pay-row premium"><span>CALL MOM x4 line</span><strong>45x + Reverse</strong></div>
+      <div class="pay-row premium"><span>CROWN x4 line</span><strong>35x + 5 Spins</strong></div>
+      <div class="pay-row"><span>CASH x4 line</span><strong>30x</strong></div>
+      <div class="pay-row"><span>DIAMOND x4 line</span><strong>25x</strong></div>
+      <div class="pay-row"><span>MOM / LOVE / BOUQUET / ROSE / HEART x4</span><strong>20x</strong></div>
+      <div class="pay-row"><span>GIFT / CHOCOLATE / KISS / PERFUME / PEARLS x4</span><strong>12x</strong></div>
+      <div class="pay-row"><span>Any matching x3 line</span><strong>2x-8x</strong></div>
+      <div class="pay-row scatter"><span>3 Card scatters anywhere</span><strong>10x + Bonus</strong></div>
+      <div class="pay-row scatter"><span>4 Card scatters anywhere</span><strong>25x + Bonus</strong></div>
+      <div class="pay-row scatter"><span>3+ Crowns anywhere</span><strong>+3 Spins</strong></div>
+      <div class="pay-row scatter"><span>3+ Call Mom anywhere</span><strong>+3 Reverse</strong></div>
+      <div class="pay-row scatter"><span>3+ Queens anywhere</span><strong>15x</strong></div>
+    </div>
+
+    <h2 class="section-gap">12 Paylines</h2>
+    <ol class="payline-list">
+      <li>Top row: 1-2-3-4</li><li>Upper middle: 5-6-7-8</li><li>Lower middle: 9-10-11-12</li><li>Bottom row: 13-14-15-16</li>
+      <li>Left column: 1-5-9-13</li><li>Inner left: 2-6-10-14</li><li>Inner right: 3-7-11-15</li><li>Right column: 4-8-12-16</li>
+      <li>Down diagonal: 1-6-11-16</li><li>Up diagonal: 4-7-10-13</li><li>Crown step: 1-6-7-12</li><li>Rose step: 5-10-11-16</li>
+    </ol>
+
+    <h2 class="section-gap">Luck Meter</h2>
+    <div class="meter"><div class="fill" id="hypeFill" style="width: 100%;"></div></div>
+    <p class="mini" id="hypeText">Luck: 100%</p>
+    <h2 class="section-gap">Controls</h2>
+    <ul class="list-tight"><li>Tap Spin or press Space.</li><li>Press Space during spin for fast stop.</li><li>Use A for auto, S to stop auto.</li><li>Use + / - for bet changes.</li></ul>
+  </aside>
+</main>
+<section class="wrap row">
+  <div class="bonus-card utility-hidden"><h2>Bonus Board</h2><p id="bonusStatus">Mother's Day Card Bonus ready.</p><div class="bonus-grid" id="bonusGrid"><button type="button" class="bonus-tile" data-value="REWIND">?</button><button type="button" class="bonus-tile" data-value="25">?</button><button type="button" class="bonus-tile" data-value="75">?</button><button type="button" class="bonus-tile" data-value="100">?</button><button type="button" class="bonus-tile" data-value="50">?</button><button type="button" class="bonus-tile" data-value="+3">?</button><button type="button" class="bonus-tile" data-value="+2">?</button><button type="button" class="bonus-tile" data-value="FULL">?</button><button type="button" class="bonus-tile" data-value="LOSE">?</button></div></div>
+  <div class="readme-card"><h2>Troubleshooting</h2><ul><li>Hard refresh after upload so the browser dumps old cache, because browsers cling to bad choices like raccoons with vape pens.</li><li>If images do not appear, keep the <code>assets</code> folder beside <code>index.html</code>.</li><li>Mobile layout is centered and boxed so tiles stop wandering outside their homes.</li></ul></div>
+</section>
+<div class="bonus-splash" id="bonusSplash" aria-hidden="true"><div class="bonus-splash-card"><img src="./MATTBEAR - Mother’s Day Slots!_files/bonus-games-splash.gif" alt="Bonus splash"><strong>Flowers Family Favor!</strong><span>The Queen has chosen!</span></div></div>
+
+<footer class="footer wrap">WORD$LOTS - Mother’s Day Edition - Customized Fun for Customized Lives - Customized Fun for Customized Lives<br>©2026 MATTBEAR. Free to play. No real money gambling or prizes.</footer>
+<script src="./MATTBEAR - Mother’s Day Slots!_files/app.js"></script><script>if("serviceWorker" in navigator){navigator.serviceWorker.register("./service-worker.js").catch(()=>{});}</script>
+
+
+</body></html>
